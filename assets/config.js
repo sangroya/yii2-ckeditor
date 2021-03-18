@@ -8,6 +8,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.language = 'au';
 	// config.uiColor = '#AADC6E';
 	config.removePlugins = 'exportpdf';
+	config.removeButtons = 'Save,Language';
 
 	config.toolbarGroups = [
 		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
