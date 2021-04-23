@@ -6,6 +6,8 @@
  */
 return [
     'height' => 400,
+    'toolbarCanCollapse'=>true,
+    'toolbarStartupExpanded'=>false,
     'toolbarGroups' => [
         
             ['name' => 'document', 'groups' => ['mode', 'document', 'doctools']],
@@ -23,8 +25,7 @@ return [
 
             ['name' => 'insert'],
             
-
-            '/',['name'=>'align'],
+            ['name'=>'align'],
 
             ['name' => 'styles'],
 
