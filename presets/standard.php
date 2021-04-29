@@ -6,6 +6,8 @@
  */
 return [
     'height' => 300,
+    'toolbarCanCollapse'=>true,
+    'toolbarStartupExpanded'=>false,
     'toolbarGroups' => [
         ['name' => 'clipboard', 'groups' => ['mode', 'undo', 'selection', 'clipboard', 'doctools']],
         ['name' => 'editing', 'groups' => ['tools', 'about']],
