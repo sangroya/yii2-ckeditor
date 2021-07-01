@@ -8,6 +8,7 @@ return [
     'height' => 400,
     'toolbarCanCollapse'=>true,
     'toolbarStartupExpanded'=>false,
+     'autoCapsFirstLetter'=>true,
     'toolbarGroups' => [
         
             ['name' => 'document', 'groups' => ['mode', 'document', 'doctools']],
