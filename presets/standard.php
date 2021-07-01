@@ -8,6 +8,7 @@ return [
     'height' => 300,
     'toolbarCanCollapse'=>true,
     'toolbarStartupExpanded'=>false,
+     'autoCapsFirstLetter'=>true,
     'toolbarGroups' => [
         ['name' => 'clipboard', 'groups' => ['mode', 'undo', 'selection', 'clipboard', 'doctools']],
         ['name' => 'editing', 'groups' => ['tools', 'about']],
