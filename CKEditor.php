@@ -67,7 +67,26 @@ class CKEditor extends InputWidget
         }
 
         $this->view->registerJs(implode("\n", $js));
-       
+$JS=<<<JS
+$(document).ready(function(){
+CKEDITOR.on("instanceReady", function(event)
+{
+    CKEDITOR.instances["$id"].document.getBody().on('keydown', function(event) {
+
+    if (event.data.getKeystroke() >= 65 && event.data.getKeystroke()<=91 && encodeURI(this.getText())=="%0A" && this.getText().length==1 ) {
+        // insert 'A' instead of 'a'
+        CKEDITOR.instances["$id"].insertText(String.fromCharCode(event.data.getKeystroke()));
+        event.data.preventDefault();
+    }
+});
+});
+
+
+})
+JS;
+if(isset($this->clientOptions['autoCapsFirstLetter']) && $this->clientOptions['autoCapsFirstLetter'] )
+$this->view->registerJs($JS);
+
     }
 
     protected function registerAssets($view)
